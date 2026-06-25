@@ -1,2 +1,8 @@
-requests
-python-dotenv
+requests>=2.32.4
+python-dotenv>=1.0.0
+
+# Transitive dependencies pinned to avoid known vulnerabilities
+urllib3>=2.5.0      # CWE-212 Sensitive data exposure
+idna>=3.15          # CWE-1333 ReDoS
+certifi>=2024.7.4   # stale root certificates
+charset-normalizer>=3.4.2
